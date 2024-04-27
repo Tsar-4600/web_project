@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Actor&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+        <header class="menu">
+            <div class="main-container">
+                <div class = "logo-and-navigation">
+                    <div id = "site_logo" class = "logo">
+                        <a href = "#1st-Section" ><img src="images/pepoma-logo/png/logo-no-background.png" alt=""/></a>
+                    </div>
+                    <div class="navigation-menu">
+                        <ul class= "navigation-menu-list">
+                            <li><a href = "#6th-Section">О нас</a></li>
+                            <li><a href = "#8th-Section">Контакты</a></li>
+                            <li><a href = "#3rd-Section">Бизнесу</a></li>
+                            <li><a href = "#7th-Section">Отзывы</a></li>
+                        
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section id = "1st-Section" class = "first">
+                <div class = "first-block">
+                    <div class="main-container">
+                        <div class="Title-text">
+                            <div class = "Title-text-first-title">Создайте лучшую рабочую<br>среду с нашим Pepoma!</div>
+                            <div class = "Title-text-second-title">Ваш путь к успеху – с нашим<br>продуктом! </div>
+                        </div>
+                        <div class = "flexed-content-button-content">
+                            <div class="first-block-content">Откройте новые возможности для управления вашим персоналомс помощью мощного и легкоиспользуемого HRMS</div>
+                            <button type="button"  onclick="openForm(1)" class="Btn-trial-demo">Запросить демо</button>
+                            <div class="first-block-content">Упростите процессы, повысьте производительность и обеспечьте развитие карьеры вашей организации</div>
+                        </div>
+                        <div class="sub-title-text">Станьте лидером своей отрасли с нашим Pepoma!</div>
+                        <div class="flexed-image-features">
+                            <div class="image-and-block">
+                                <div class ="images"><img src="images/first-block/automatization.svg" alt= ""/></div>
+                                <div class = "text">Автоматизацияи эффективность на всех этапах</div>
+                            </div>
+                            <div class="image-and-block">
+                                <div class ="images"><img src="images/first-block/managment.svg" alt= ""/></div>
+                                <div  class = "text"> Единая система для управления персоналом </div>
+                            </div>
+                            <div class="image-and-block">
+                                <div class ="images"><img src="images/first-block/system.svg" alt= ""/></div>
+                                <div class = "text">Сохранение времени и ресурсов</div>
+                            </div>
+                            <div class="image-and-block">
+                                <div class ="images"><img src="images/first-block/time.svg" alt= ""/></div>
+                                <div class = "text">Огромный выбор статистики</div>
+                            </div>
+                            <div class="form-popup" id="trialDemo-FormShow">
+                                <form class="form-container" name ="trialDemoForm" id="trialDemoForm">
+                                    <div class = "form-title">Отправка контактов</div>
+                                        <div  class = "form-input-label">
+                                            <label for = "email">Почта(Email)</label>
+                                            <input type="text" placeholder="Enter Email" id="email" name="email" required>
+                                        </div>
+                                        <div  class = "form-input-label">
+                                            <label for ="telephone">Телефон</label>
+                                            <input type="text" placeholder="+79213215233" id="telephone" name="telephone" required>
+                                    
+                                        </div>
+                                        <div  class = "form-input-label">
+                                            <label for ="customer_name">Имя</label>
+                                            <input type= "text" placeholder = "Имя" id = "customer_name" name = "customer_name">
+                                        </div>
+                                        <div class = "form-buttons">
+                                            <button id = "send_button" type="button" onclick = "order_made_successful()">Отправить</button>
+                                            <button id = "close_button" type="button" onclick="closeForm()">Закрыть</button>
+                                        </div>
+                                </form>
+                                
+                            </div>
+                            <div id = "succes_window" class = "successfull_order_containter">
+                                <div class = "text-and-submit">
+                                    <div class = "text_success">Контакты отправлены!</div>
+                                    <div class = "text_gratitude">Спасибо что выбрали именно нас!</div>
+                                    <button id = "ok_button" type = "button" onclick="closeForm()">OK</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    
+                </div>
+                 <!--elements triggred by forms -->
+                <!-- form to take contacts -->
+              
+            </section>
+            <section id ="2nd-Section" class= "second">
+                <div class ="second-block">
+                    <div class = "main-container">
+                        <div class = "title-and-setupBtn">
+                            <div class ="second-block-title1">Оформите подписку</div>
+                            <div class ="second-block-title2">Настройте ваш собственный тариф!</div>
+                            <div class ="second-block-undertitlecontent">Создайте свой тариф с помощью<br>наших удобных настроек.</div>
+                            <button onclick = "openForm(2)" class="Btn-set-up" type="button">Связаться</button>
+                        </div>
+                        <div class = "slider-and-text-shwButton">
+                            <div class="slideshow-container">
+                                <div class="top-slider-part">
+                                    <!--previous button-->
+                                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                                    <!-- Full-width images with number and caption text -->
+                                    <div class="mySlides fade">
+                                        <img src="images/first-block/offer.png" alt="" style="width:100%">
+                                        
+                                    </div>
+                                    <div class="mySlides fade">
+                                        <img src="images/first-block/offer2.png" alt = "" style="width:100%">
+                                    </div>
+                                    <div class="mySlides fade">
+                                        <img src="images/first-block/offer3.png" alt="" style="width:100%">
+                                    </div>
+                                    <!-- Next button -->
+                                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                                </div>
+                                <div>
+                                    <!-- The dots/circles -->
+                                    <div class="dot" onclick="currentSlide(1)"></div>
+                                    <div class="dot" onclick="currentSlide(2)"></div>
+                                    <div class="dot" onclick="currentSlide(3)"></div>
+                                </div>
+                            </div>  
+                            <div class = "text-show-btn">
+                                <div class = "title">Не знайте что вам нужно?</div>
+                                <div class = "answer">У нас есть готовые решения</div>
+                                <button onclick = "openForm(2)" type = "button" class="show-btn">Купить</button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+            <section id = "3rd-Section" class="third">
+                <div class = "third-block">
+                    <div class="main-container">
+                        <!-- first-part -->
+                        <div class = "third-block-title">
+                            <div class = "third-block-titleText">Почему именно Pepoma?</div>
+                            <div class = "third-block-forOrganiztionText">Для организаций</div>
+                            <div class = "third-block-goalText">Наши ценность и миссия  – помогать вашему бизнесу </div>
+                            <div class = "third-block-actionText">Достигай новых высот с помощью оптимального управления персоналом.</div>
+                        </div>
+                        <!-- first dropdown list -->
+                        <div class = "dropdown-list-1st">
+                            <div class="dropdown first-line">
+                                <div class="dropdownbtn-and-sign">
+                                    <button onclick="myFunction(0)"  class="dropbtn">Инновационные функции и технологии</button>
+                                    <div class = "arrow-background">
+                                        <a id = "arrows" class="arrow" onclick ="myFunction(0)">&#10095;</a>
+                                    </div>
+
+                                </div>
+                                <div id="myDropdown" class="dropdown-content">
+                                    <a>–Использование AI в нестандартных задачах.</a>
+                                </div>
+                            </div>
+                            <div class="dropdown second-line">
+                                <div class="dropdownbtn-and-sign">
+                                    <button onclick="myFunction(1)" class="dropbtn">Интуитивно понятный интерфейс</button>
+                                    <div class = "arrow-background">
+                                        <a  class="arrow" onclick ="myFunction(1)">&#10095;</a>
+                                    </div>
+                                </div>
+                                <div  class="dropdown-content">
+                                <a>–С легкостью разберись в функционале программы за пару раз использования продукта</a>
+                                </div>
+                            </div>
+                            <div class="dropdown third-line">
+                                <div class="dropdownbtn-and-sign">
+                                    <button onclick="myFunction(2)" class="dropbtn">Осознанный подход к развитию и поддержке клиентов</button>
+                                    <div class = "arrow-background">
+                                        <a  class="arrow" onclick ="myFunction(2)">&#10095;</a>
+                                    </div>
+                                </div>
+                                <div  class="dropdown-content">
+                                <a>–Разработанный чат бот для ответа на все ваши интересующие вопросы</a>
+                                </div>
+                            </div>
+                           
+                            <div class="dropdown fourth-line">
+                                <div class="dropdownbtn-and-sign">
+                                    <button onclick="myFunction(3)" class="dropbtn">Повышение эффективности и экономии времени</button>
+                                    <div class = "arrow-background">
+                                        <a  class="arrow" onclick ="myFunction(3)">&#10095;</a>
+                                    </div>
+                                </div>
+                                <div  class="dropdown-content">
+                                <a>–Функций для мониторинга и автоматизации ваших повседневных задач помогут отвлечься на развитие новых направлений в вашей компании.</a>
+                                </div>
+                            </div>
+                            <div class="dropdown fifth-line">
+                                <div class="dropdownbtn-and-sign">
+                                    <button onclick="myFunction(4)" class="dropbtn">Конкурентное преимущество и уникальные решения для вашего бизнеса</button>
+                                    <div class = "arrow-background">
+                                        <a  class="arrow" onclick ="myFunction(4)">&#10095;</a>
+                                    </div>
+                                </div>
+                                <div  class="dropdown-content">
+                                <a>–Перемещайтесь между локальной системой компании и облачным сервисом для гибкости вашей системы</a>
+                                </div>
+                            </div>
+                            <button onclick= "openForm(2)" type = "button" class = "third-block-more-infoBtn">Подробнее</button>
+                        </div>
+                        <!-- second-part -->
+                        <div class = "title-for-person-containter">
+                            <div class = " third-block-for-person-Text">Для личного пользования</div>
+                            <div class = " third-block-goalText">Не предприниматель?<br>Не проблема!</div>
+                            <div class = "third-block-answer-text">Управляй своей жизнью с повышенной<br>эффективностью!<br>Открывай возможности Pepoma для личного<br>пользования!</div>
+                        </div>
+                        <!-- second dropdown list -->
+                        <div class = "dropdown-list-2nd">
+                            <div class="dropdown first-line">
+                                <div class="dropdownbtn-and-sign">
+                                    <div class = "arrow-background">
+                                        <a class="arrow" onclick ="myFunction(5)">&#10094;</a>
+                                    </div>
+                                    <button onclick="myFunction(5)" class="dropbtn">Электронные журналы и планы</button>
+                                  
+                                </div>
+                                <div class="dropdown-content">
+                                <a>–Pepoma помогает в организации личной жизни и планировании свободного времени</a>
+                                </div>
+                            </div>
+                            <div class="dropdown second-line">
+                                <div class="dropdownbtn-and-sign">
+                                    <div class = "arrow-background">
+                                        <a  class="arrow" onclick ="myFunction(6)">&#10094;</a>
+                                    </div>
+                                    <button onclick="myFunction(6)" class="dropbtn">Управление финансами и бюджетом</button>
+                                    
+                                </div>
+                                <div  class="dropdown-content">
+                                <a>–Трактовка расходов, бюджетирование и отслеживание сбережений</a>
+                                </div>
+                            </div>
+                          
+                            <div class="dropdown third-line">
+                                <div class="dropdownbtn-and-sign">
+                                    <div class = "arrow-background">
+                                        <a  class="arrow" onclick ="myFunction(7)">&#10094;</a>
+                                    </div>
+                                    <button onclick="myFunction(7)" class="dropbtn">Мобильные приложения и доступность</button>
+                                  
+                                </div>
+                                <div  class="dropdown-content">
+                                <a>–Мобильные приложения, для доступа к функциям и возможностям системы на любом устройстве с любого места для организации и управления личной жизнью на ходу</a>
+                                </div>
+                            </div>
+                            <div class="dropdown fourth-line">
+                                <div class="dropdownbtn-and-sign">
+                                    <div class = "arrow-background">
+                                        <a  class="arrow" onclick ="myFunction(8)">&#10094;</a>
+                                    </div>
+                                    <button onclick="myFunction(8)" class="dropbtn">Электронное хранилище документов и данных</button>
+                                    
+                                </div>
+                                <div  class="dropdown-content">
+                                <a>–Pepoma предоставить безопасное и централизованное хранилище для важных личных документов и данных</a>
+                                </div>
+                            </div>
+                           
+                            <div class="dropdown fifth-line">
+                                <div class="dropdownbtn-and-sign">
+                                    <div class = "arrow-background">
+                                        <a  class="arrow" onclick ="myFunction(9)">&#10094;</a>
+                                    </div>
+                                    <button onclick="myFunction(9)" class="dropbtn">Управление личными проектами и KPI Функции</button>
+                                    
+                                </div>
+                                <div  class="dropdown-content">
+                                <a>–Pepoma адаптированы для личного использования, помогая планировании и достижении личных целей и показателей успешности</a>
+                                </div>
+                            </div>
+                            <button onclick = "openForm(2)" type = "button" class = "third-block-more-infoBtn">Демо версия</button>
+                        </div>
+                        
+                        
+                        
+                    </div>
+                </div>
+            </section>
+            <section id ="4th-Section" class = "fourth">
+                <div class = "fourth-block">
+                    <div class = "main-container">
+                        <div class = "fourth-block-title">Какие проблемы решает Pepoma?</div>
+                        <div class ="fourth-block-flexed-list-images">
+                            <div class = "fourth-block-image-and-text">
+                                <img src= "images/fourth-block/career.jpg" alt= "" class = "fourth-block-image"/>
+                                <div class = "text-to-image">Управление карьерным ростом и развитием</div>
+                            </div>
+                            <div class = "fourth-block-image-and-text">
+                                <img src= "images/fourth-block/clients.svg" alt= "" class = "fourth-block-image"/>
+                                <div class = "text-to-image">Осознанный подход к развитию и поддержке клиентов</div>
+                            </div>
+                            <div class = "fourth-block-image-and-text">
+                                <img src= "images/fourth-block/profit-lost.svg" alt= "" class = "fourth-block-image"/>
+                                <div class = "text-to-image">Управление бюджетом и расходами</div>
+                            </div>
+                            <div class = "fourth-block-image-and-text">
+                                <img src= "images/fourth-block/statistics.jpg" alt= "" class = "fourth-block-image"/>
+                                <div class = "text-to-image">Отчетность и аналитика</div>
+                            </div>
+                            <div class = "fourth-block-image-and-text">
+                                <img src= "images/fourth-block/kpi.jpg" alt= "" class = "fourth-block-image"/>
+                                <div class = "text-to-image">Улучшение взаимодействия между сотрудниками</div>
+                            </div>
+                      
+                            <div class = "fourth-block-image-and-text">
+                                <img src= "images/fourth-block/mobile-app.jpg" alt= "" class = "fourth-block-image"/>
+                                <div class = "text-to-image">Мобильные приложения и доступность</div>
+                            </div>
+                            <div class = "fourth-block-image-and-text">
+                                <img src= "images/fourth-block/security.jpg" alt= "" class = "fourth-block-image"/>
+                                <div class = "text-to-image">Безопасность и конфиденциальность данных</div>
+                            </div>
+                            <div class = "fourth-block-image-and-text">
+                                <img src= "images/fourth-block/corporative-culture.jpg" alt= "" class = "fourth-block-image"/>
+                                <div class = "text-to-image">Развития эффективной корпоративной культуры</div>
+                            </div>
+                            <div class = "fourth-block-image-and-text">
+                                <img src= "images/fourth-block/law-clean.jpg" alt= "" class = "fourth-block-image"/>
+                                <div class = "text-to-image">Обеспечение соответствия законодательству</div>
+                            </div>
+                            <div class = "fourth-block-image-and-text">
+                                <img src= "images/fourth-block/learning.jpg"  alt= "" class = "fourth-block-image"/>
+                                <div class = "text-to-image">Доступ к обучающим материалам</div>
+                            </div>
+                        </div>
+                        <button onclick = "openForm(3)" class="fourth-block-MoreInfoBtn" type="button">Подробнее</button>
+                    </div>
+                
+                </div>
+                
+            </section>
+            <section id = "5th-Section" class = "fifth">
+                <div class = "fifth-block">
+                    <div class = "main-container">
+                        <div class = "fifth-block-title">Партнеры</div>
+                            <div class = "swiper-background">
+                                <div class="swiper mySwiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="images/fifth-block/google.png" alt ="google" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="images/fifth-block/telegram.png" alt="telegram"/>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="images/fifth-block/mcdonalds-logo.png" alt = "mcdonalds">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="images/fifth-block/mexican_gril.png" alt="mexican_gril"/>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="images/fifth-block/burger_king.png" alt ="burger_king"/>
+                                        </div>
+                                        
+                                        <div class="swiper-slide">
+                                            <img src="images/fifth-block/mortal_kombat.png" alt="mortal_kombat"/>
+                                        
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="images/fifth-block/megaphone.png" alt="megaphone"/>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="images/fifth-block/msi_logo.png" alt="msi"/>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-button-next"></div>
+                                    <div class="swiper-button-prev"></div> 
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                            </div>
+                       
+                    </div>
+                </div>
+            </section>
+            <section id = "6th-Section" class = "sixth">
+                <div class = "sixth-block">
+                    <div class = "main-container">
+                        <div class = "sixth-block-title">О нас</div>
+                        <div class = "text-and-photos-of-founders">
+                            
+                            <div class = "sixth-block-text-about-us">В рамках IT компания Pepoma столкнулась с множеством вызовов и возможностей на пути к установлению своего положения. Основатели компании, Алекс, Миа, Оливия и Виктор, осознавали остроту конкуренции и необходимость постоянного развития и инноваций.
+                            </div>
+                            <div class = "photos-and-names">
+                                <div id = "Mia-name" class = "name">Миа</div>
+                                <div id = "Viktor-name" class = "name">Виктор</div>
+                                <div id = "Olivia-name" class = "name">Оливия</div>
+                                <div id = "Alex-name" class = "name">Алекс</div>
+                                <div class = "photos-and-names-1st-row">
+                                    <img class = "arrow-name"  src = "images/arrow-mia.svg"/>
+                                    <img class ="big-photo" src = "images/sixth-block/mia.jpg"/>
+                                    <img class = "small-photo" src = "images/sixth-block/alex.jpg"/>
+                                    <img class = "arrow"  src = "images/arrow-alex.svg"/>
+                                </div>
+                                <div class = "photos-and-names-2nd-row">
+                                    <img class = "arrow"  src = "images/arrow-viktor.svg"/>
+                                    <img class="small-photo" src = "images/sixth-block/viktor.jpg"/>
+                                    <img class="big-photo" src = "images/sixth-block/olivia.jpg"/>
+                                    <img class = "arrow"  src = "images/arrow-olivia.svg"/>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+            <section id = "7th-Section" class = "seventh">
+                <div class ="seventh-block">
+                    <div class = "main-container">
+                        <div class = "seventh-block-title">Отзывы</div>
+                        <div class = "swiper-background">
+                            <div class ="swiper mySwiperReview">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                    
+                                        <img class = "profile-review" src="images/seventh-block/profile_icon.jpg" alt = " ">
+                                        <div class = "profile-Name">Бабуин_1670</div>
+                                        <div class = "text-Review ">Я хотел бы отметить высокое качество приложения, разработанного компанией Pepoma. Дизайн и интерфейс приложения красивы, удобны в использовании и очень интуитивны, что делает его привлекательным для пользователей с разными уровнями технических знаний.</div>
+                                    
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img class = "profile-review" src="images/seventh-block/profile_icon.jpg" alt = " "/>
+                                        <div class = "profile-Name">Харам Харян</div>
+                                        <div class = "text-Review ">
+                                            Команда Pepoma проявляет активное участие в процессе обучения пользователей и предоставления технической поддержки. Они всегда готовы помочь и решать возникающие вопросы, что делает сотрудничество с ними комфортным и безопасным.
+                                        
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img class = "profile-review" src="images/seventh-block/profile_icon.jpg" alt = ""/>
+                                        <div class = "profile-Name">Саня Лакост</div>
+                                        <div class = "text-Review ">Однако, стоит отметить, что некоторые пользователи могут столкнуться с трудностями при освоении всех возможностей приложения, поэтому предлагается предоставить более подробную инструкцию или видео-туториалы для начинающих. В целом, я рекомендую это приложение всем, кто ищет надежное и функциональное средство для выполнения своих задач.</div>
+                                        
+                                    </div>
+                                    <div class="swiper-slide">
+                                        
+                                        <img class = "profile-review" src="images/seventh-block/profile_icon.jpg" alt=" "/>
+                                        <div class = "profile-Name">Rozhok213_123</div>
+                                        <div class = "text-Review ">Приложение является удивительно полезным и удобным в использовании. Интерфейс имеет интуитивно понятное оформление, что значительно упрощает навигацию. Функциональность приложения широка и покрывает множество аспектов, которые могут быть полезны для пользователей. Регулярные обновления и поддержка разработчиков также заслуживают особой оценки.</div>
+                                        
+                                    </div>
+                                    <div class="swiper-slide">
+                                        
+                                        <img class = "profile-review" src="images/seventh-block/profile_icon.jpg" alt = " ">
+                                        <div class = "profile-Name">Rostasrasd</div>
+                                        <div class = "text-Review ">Я нашел приложение очень ценным и полезным для моих задач. Оно предлагает широкий спектр функций, которые упрощают мою жизнь и повышают эффективность работы. Интерфейс приложения сделал его легким в освоении, и я бы рекомендовал его другим пользователям. Несмотря на то, что некоторые аспекты могут быть улучшены</div>
+                                    
+                                    </div>
+                                    
+                                
+                                </div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div> 
+                                
+                                <div class="swiper-pagination"></div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer id = "8th-Section" class = "eighth">
+            <div class = "eighth-block">
+                <div class = "main-container">
+                    <div class = "contacts-title">Контакты</div>
+                    <div class = "contacts-flexed-container">
+                        <div class = "contacts-flexed-container-element">
+                            <a href="#"><img src = "images/footer/email.png" alt = ""></a>
+                            <div class = "text">pochta@gg.com</div>
+                        </div>
+                        <div class = "contacts-flexed-container-element">
+                            <a href="#"><img src = "images/footer/tm.png" alt = ""></a>
+                            <div class = "text">telegram/id124512</div>
+                        </div>
+                        <div class = "contacts-flexed-container-element">
+                            <a href = "#"><img src = "images/footer/telephone.png" alt = ""></a>
+                            <div class = "text">+7923423623515</div>
+                        </div>
+                        <div class = "contacts-flexed-container-element">
+                            <a href= "#"><img src = "images/footer/github.png" alt =" "></a>
+                            <div class = "text">github/Pepoma</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    
+        <script src="javascript/script.js"></script>
+       
+</body>
+   
+</html>
