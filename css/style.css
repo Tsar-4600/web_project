@@ -2140,8 +2140,6 @@
     /* Eighth-block */
     .eighth{
         min-width: 100%;
-        margin-top: 60px;
-        padding-top: 60px;
         padding-bottom: 60px;
         background-color:#000000;
     }   
